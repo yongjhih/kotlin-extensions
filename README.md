@@ -2,6 +2,16 @@
 
 ## Usage
 
+```java
+SharePreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+SharePreferences.Editor editor = prefs.edit();
+editor.putString("name", "Andrew Chen");
+editor.putInt("age", 18, 14);
+editor.apply();
+```
+
+After:
+
 ```kotlin
 
 User().edit(context) {
