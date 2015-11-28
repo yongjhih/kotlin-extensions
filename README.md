@@ -67,7 +67,7 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 dependencies {
-    compile 'com.infstory:kotlin-sharedpreferences:-SNAPSHOT'
+    compile 'com.github.yongjhih:kotlin-sharedpreferences:-SNAPSHOT'
 }
 ```
 
