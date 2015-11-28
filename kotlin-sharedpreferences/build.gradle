@@ -34,3 +34,6 @@ dependencies {
     // testCompile expresso
     // testCompile junit
 }
+
+apply plugin: 'com.github.dcendents.android-maven'
+apply from: 'android-javadoc.gradle'
