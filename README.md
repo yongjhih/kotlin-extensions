@@ -1,4 +1,4 @@
-# KotSharedPreferences
+# kotlin-sharedpreferences
 
 <!--[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxParse-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1670)-->
 <!--[![Download](https://api.bintray.com/packages/yongjhih/maven/kotlin-sharedpreferences/images/download.svg) ](https://bintray.com/yongjhih/maven/kotlin-sharedpreferences/_latestVersion)-->
@@ -47,6 +47,40 @@ user.apply()
 public class User(context: Context) : Preferences(context) {
   var name: String by Preference()
   var age: Int by Preference(default = 14)
+}
+```
+
+## Bonus - SharedPreferences Extension:
+
+Before:
+
+```java
+SharedPreferences.Editor editor = preferences.edit();
+
+editor.putString("first_name", "Andrew");
+editor.putString("last_name", "Chen");
+editor.remove("age");
+
+editor.apply();
+```
+
+or
+
+```java
+SharedPreferencesUtils.from(preferences).apply(editor -> {
+  editor.putString("first_name", "Andrew");
+  editor.putString("last_name", "Chen");
+  editor.remove("age");
+});
+```
+
+After:
+
+```kotlin
+preferences.edit {
+  putString("first_name", "Andrew")
+  putString("last_name", "Chen")
+  remove("age")
 }
 ```
 

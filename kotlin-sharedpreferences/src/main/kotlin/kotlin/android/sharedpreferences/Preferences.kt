@@ -72,6 +72,7 @@ public open class Preferences(prefs: SharedPreferences): SharedPreferences by pr
                 return null as T
             }
             */
+            // FIXME: Unchecked cast: kotlin.Any? to T
             return when (property.returnType.toString()) {
                 "kotlin.Int?" -> thisRef.getInt(property.name, 0)
                 "kotlin.Boolean?" -> thisRef.getBoolean(property.name, false)
@@ -131,7 +132,8 @@ public open class Preferences(prefs: SharedPreferences): SharedPreferences by pr
     }
 
     /*
-    fun edit(func: Any?.() -> Unit) {
+    TODO
+    fun edit(func: T?.() -> Unit) {
         func()
         editor.apply()
     }
