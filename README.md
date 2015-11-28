@@ -4,7 +4,7 @@
 
 ```kotlin
 
-User(context).edit {
+User().edit(context) {
   name = "Andrew Chen"
   age = "18"
 }
