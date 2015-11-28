@@ -21,7 +21,7 @@ User(context).edit() {
   age = "18"
 }
 
-public class User {
+public class User(context: Context) : Preferences(context) {
   var name: String by Preference()
   var age: Int by Preference(default = 14)
 }
@@ -34,7 +34,7 @@ User user = User(context)
 user.name = "Andrew Chen"
 user.age = 18
 
-public class User {
+public class User(context: Context) : Preferences(context) {
   var name: String by Preference()
   var age: Int by Preference(default = 14)
 }
