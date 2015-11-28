@@ -25,7 +25,7 @@ After:
 
 ```kotlin
 
-User(context).edit() {
+User(context).edit {
   name = "Andrew Chen"
   age = "18"
 }
@@ -42,6 +42,7 @@ or
 User user = User(context)
 user.name = "Andrew Chen"
 user.age = 18
+user.apply()
 
 public class User(context: Context) : Preferences(context) {
   var name: String by Preference()
