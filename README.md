@@ -54,11 +54,19 @@ public class User(context: Context) : Preferences(context) {
 jcenter:
 
 ```gradle
-compile 'com.infstory:kotlin-sharedpreferences:1.0.0'
+dependencies {
+    compile 'com.infstory:kotlin-sharedpreferences:1.0.0'
+}
 ```
 
 jitpack:
 
 ```gradle
-compile 'com.infstory:kotlin-sharedpreferences:-SNAPSHOT'
+repositories {
+    // ...
+    maven { url "https://jitpack.io" }
+}
+dependencies {
+    compile 'com.infstory:kotlin-sharedpreferences:-SNAPSHOT'
+}
 ```
