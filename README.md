@@ -3,7 +3,7 @@
 <!--[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxParse-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1670)-->
 <!--[![Download](https://api.bintray.com/packages/yongjhih/maven/kotlin-sharedpreferences/images/download.svg) ](https://bintray.com/yongjhih/maven/kotlin-sharedpreferences/_latestVersion)-->
 [![JitPack](https://img.shields.io/github/tag/yongjhih/kotlin-sharedpreferences.svg?label=JitPack)](https://jitpack.io/#yongjhih/kotlin-sharedpreferences)
-[![javadoc](https://img.shields.io/github/tag/yongjhih/kotlin-sharedpreferences.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/kotlin-sharedpreferences/rxparse/c3256ac553/javadoc/)
+[![javadoc](https://img.shields.io/github/tag/yongjhih/kotlin-sharedpreferences.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/kotlin-sharedpreferences/-SNAPSHOT/javadoc/)
 [![Build Status](https://travis-ci.org/yongjhih/kotlin-sharedpreferences.svg)](https://travis-ci.org/yongjhih/kotlin-sharedpreferences)
 [![Join the chat at https://gitter.im/yongjhih/kotlin-sharedpreferences](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yongjhih/kotlin-sharedpreferences?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
