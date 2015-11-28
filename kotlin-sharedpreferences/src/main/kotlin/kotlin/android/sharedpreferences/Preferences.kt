@@ -36,43 +36,9 @@ public open class Preferences(prefs: SharedPreferences): SharedPreferences by pr
     }
 
     public inner class Preference<T>: ReadWriteProperty<SharedPreferences, T> {
+        //val type: T? = null
+        @Suppress("UNCHECKED_CAST", "IMPLICIT_CAST_TO_UNIT_OR_ANY")
         override fun getValue(thisRef: SharedPreferences, property: KProperty<*>): T {
-            Log.d(TAG, "prop: " + property.returnType)
-            Log.d(TAG, "toString: " + property.returnType.toString())
-            Log.d(TAG, "javaClass: " + property.returnType.javaClass)
-            Log.d(TAG, "javaType: " + property.returnType.javaType)
-            Log.d(TAG, "Int.javaClass: " + Int.javaClass)
-            Log.d(TAG, "Int: " + Int)
-            Log.d(TAG, "java.lang.Integer.TYPE: " + java.lang.Integer.TYPE)
-            /*
-            val i: Int = 1
-            val bool: Boolean = false
-            return if (property.returnType.javaType == java.lang.Integer.TYPE) {
-                Log.d(TAG, ":Int")
-                return thisRef.getInt(property.name, i) as T
-            } else if (property.returnType.javaType.equals(java.lang.Integer.TYPE)) {
-                Log.d(TAG, ":Int2")
-                return thisRef.getInt(property.name, i) as T
-            } else if (property.returnType.javaType.equals(Int)) {
-                Log.d(TAG, ":Int3")
-                return thisRef.getInt(property.name, i) as T
-            } else if (property.returnType.equals(bool)) {
-                Log.d(TAG, "Boolean")
-                return thisRef.getBoolean(property.name, bool) as T
-            } else if (property.returnType.equals(String())) {
-                Log.d(TAG, "String")
-                return thisRef.getString(property.name, null) as T
-            } else if (property.returnType.equals(Float)) {
-                Log.d(TAG, "Float")
-                return thisRef.getFloat(property.name, 0f) as T
-            } else if (property.returnType.equals(Long)) {
-                Log.d(TAG, "Long")
-                return thisRef.getLong(property.name, 0) as T
-            } else {
-                return null as T
-            }
-            */
-            // FIXME: Unchecked cast: kotlin.Any? to T
             return when (property.returnType.toString()) {
                 "kotlin.Int?" -> thisRef.getInt(property.name, 0)
                 "kotlin.Boolean?" -> thisRef.getBoolean(property.name, false)
@@ -81,23 +47,27 @@ public open class Preferences(prefs: SharedPreferences): SharedPreferences by pr
                 "kotlin.Long?" -> thisRef.getLong(property.name, 0L)
                 else -> null
             } as T
+
             /*
-            return when (property.returnType.toString()) {
-                "Int" -> thisRef.getInt(property.name, 0)
-                "Boolean" -> thisRef.getBoolean(property.name, false)
-                "String" -> thisRef.getString(property.name, null)
-                "Float" -> thisRef.getFloat(property.name, 0f)
-                "Long" -> thisRef.getLong(property.name, 0)
-                else -> null
+            return when (type) {
+                is Int -> {
+                    Log.d(TAG, "is Int");
+                    thisRef.getInt(property.name, 0)
+                }
+                is Boolean -> thisRef.getBoolean(property.name, false)
+                is String -> {
+                    Log.d(TAG, "is String");
+                    thisRef.getString(property.name, null)
+                }
+                is Float -> thisRef.getFloat(property.name, 0f)
+                is Long -> thisRef.getLong(property.name, 0L)
+                else -> {
+                    Log.d(TAG, "is ?");
+                    null
+                }
             } as T
             */
         }
-
-        /*
-        fun isType(l: KType, r: Any): Boolean {
-            return l.toString().equals(r.toString())
-        }
-        */
 
         override fun setValue(thisRef: SharedPreferences, property: KProperty<*>, value: T) {
             when (value) {

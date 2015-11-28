@@ -29,12 +29,15 @@ class MainActivity : Activity() {
         val user = User(this)
         user.edit {
             name = "Andrew Chen"
-            age = 16
+            age = 18
         }
+        Log.d("Andrew", "name: " + user.name);
         Log.d("Andrew", "age: " + user.age);
         user.edit {
-            age = 15
+            name = "Andrew Chen2"
+            age = 14
         }
+        Log.d("Andrew", "name: " + user.name);
         Log.d("Andrew", "age: " + user.age);
     }
 
