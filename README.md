@@ -6,11 +6,11 @@
 
 User().edit(context) {
   name = "Andrew Chen"
-  age = "18"
+  age = "20"
 }
 
 public class User {
-  var name: String by Preference(default = "Andrew Chen")
-  var age: Int by Preference()
+  var name: String by Preference()
+  var age: Int by Preference(default = 18)
 }
 ```
