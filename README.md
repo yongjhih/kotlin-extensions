@@ -1,5 +1,7 @@
 # KotSharedPreferences
 
+[![Join the chat at https://gitter.im/yongjhih/kotlin-sharedpreferences](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yongjhih/kotlin-sharedpreferences?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 <!--[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxParse-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1670)-->
 [![JitPack](https://img.shields.io/github/tag/yongjhih/kotlin-sharedpreferences.svg?label=JitPack)](https://jitpack.io/#yongjhih/kotlin-sharedpreferences)
 [![Download](https://api.bintray.com/packages/yongjhih/maven/kotlin-sharedpreferences/images/download.svg) ](https://bintray.com/yongjhih/maven/kotlin-sharedpreferences/_latestVersion)
