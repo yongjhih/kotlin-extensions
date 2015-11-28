@@ -2,6 +2,8 @@
 
 ## Usage
 
+Before:
+
 ```java
 SharePreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 SharePreferences.Editor editor = prefs.edit();
