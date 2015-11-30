@@ -6,6 +6,7 @@
 [![javadoc](https://img.shields.io/github/tag/yongjhih/kotlin-sharedpreferences.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/kotlin-sharedpreferences/-SNAPSHOT/javadoc/)
 [![Build Status](https://travis-ci.org/yongjhih/kotlin-sharedpreferences.svg)](https://travis-ci.org/yongjhih/kotlin-sharedpreferences)
 [![Join the chat at https://gitter.im/yongjhih/kotlin-sharedpreferences](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yongjhih/kotlin-sharedpreferences?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Kotlin](https://img.shields.io/maven-central/v/org.jetbrains.kotlin/kotlin-maven-plugin.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.jetbrains.kotlin%22)
 
 ![](art/kotlin-sharedpreferences.png)
 
