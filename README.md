@@ -1,16 +1,48 @@
-# kotlin-sharedpreferences
+# kotlin-android-extensions
 
 <!--[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxParse-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1670)-->
-<!--[![Download](https://api.bintray.com/packages/yongjhih/maven/kotlin-sharedpreferences/images/download.svg) ](https://bintray.com/yongjhih/maven/kotlin-sharedpreferences/_latestVersion)-->
-[![JitPack](https://img.shields.io/github/tag/yongjhih/kotlin-sharedpreferences.svg?label=JitPack)](https://jitpack.io/#yongjhih/kotlin-sharedpreferences)
-[![javadoc](https://img.shields.io/github/tag/yongjhih/kotlin-sharedpreferences.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/kotlin-sharedpreferences/-SNAPSHOT/javadoc/)
-[![Build Status](https://travis-ci.org/yongjhih/kotlin-sharedpreferences.svg)](https://travis-ci.org/yongjhih/kotlin-sharedpreferences)
-[![Join the chat at https://gitter.im/yongjhih/kotlin-sharedpreferences](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yongjhih/kotlin-sharedpreferences?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+<!--[![Download](https://api.bintray.com/packages/yongjhih/maven/kotlin-android-extensions/images/download.svg) ](https://bintray.com/yongjhih/maven/kotlin-android-extensions/_latestVersion)-->
+[![JitPack](https://img.shields.io/github/tag/yongjhih/kotlin-android-extensions.svg?label=JitPack)](https://jitpack.io/#yongjhih/kotlin-android-extensions)
+[![javadoc](https://img.shields.io/github/tag/yongjhih/kotlin-android-extensions.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/kotlin-android-extensions/-SNAPSHOT/javadoc/)
+[![Build Status](https://travis-ci.org/yongjhih/kotlin-android-extensions.svg)](https://travis-ci.org/yongjhih/kotlin-android-extensions)
+[![Join the chat at https://gitter.im/yongjhih/kotlin-android-extensions](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yongjhih/kotlin-android-extensions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Kotlin](https://img.shields.io/maven-central/v/org.jetbrains.kotlin/kotlin-maven-plugin.svg?label=Kotlin)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.jetbrains.kotlin%22)
 
-![](art/kotlin-sharedpreferences.png)
+![](art/kotlin-database.png)
 
 ## Usage
+
+## Database
+
+Before:
+
+```java
+db.beginTransaction();
+try {
+  db.delete("users", "first_name = ?", new String[] { "Andrew" });
+  db.setTransactionSuccessful();
+} finally {
+  db.endTransaction()
+}
+```
+
+or
+
+```java
+Databases.from(db).inTransaction(it -> {
+  it.delete("users", "first_name = ?", new String[] { "Andrew" });
+});
+```
+
+After:
+
+```kotlin
+db.inTransation {
+  delete("users", "first_name = ?", arrayOf("Andrew"))
+}
+```
+
+## SharedPreferences
 
 Before:
 
@@ -44,14 +76,9 @@ User user = User(context)
 user.name = "Andrew Chen"
 user.age = 18
 user.apply()
-
-public class User(context: Context) : Preferences(context) {
-  var name: String by Preference()
-  var age: Int by Preference(default = 14)
-}
 ```
 
-## Bonus - SharedPreferences Extension:
+### Bonus - SharedPreferences Extension:
 
 Before:
 
@@ -77,11 +104,46 @@ SharedPreferencesUtils.from(preferences).apply(editor -> {
 
 After:
 
+## System Services
+
+Before:
+
+```java
+NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+```
+
+After:
+
+```kotlin
+val notificationManager = context.getNotificationManager()
+```
+
+
 ```kotlin
 preferences.edit {
   putString("first_name", "Andrew")
   putString("last_name", "Chen")
   remove("age")
+}
+```
+
+## Notification
+
+Before:
+
+```java
+Notification notification = new NotificationCompat.Builder(context)
+  .setContentTitle("Hello")
+  .setSubText("World")
+  .build();
+```
+
+After:
+
+```kotlin
+val notification = Notification.build(context) {
+  setContentTitle("Hello")
+  setSubText("World")
 }
 ```
 
@@ -92,6 +154,9 @@ jcenter:
 ```gradle
 dependencies {
     compile 'com.infstory:kotlin-sharedpreferences:1.0.0'
+    compile 'com.infstory:kotlin-database:1.0.0'
+    compile 'com.infstory:kotlin-system-services:1.0.0'
+    compile 'com.infstory:kotlin-notification:1.0.0'
 }
 ```
 
@@ -103,7 +168,10 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 dependencies {
-    compile 'com.github.yongjhih:kotlin-sharedpreferences:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-android-extensions:kotlin-sharedpreferences:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-android-extensions:kotlin-database:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-android-extensions:kotlin-system-services:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-android-extensions:kotlin-notification:-SNAPSHOT'
 }
 ```
 

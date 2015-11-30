@@ -1,2 +1,5 @@
 include ':app'
 include ':kotlin-sharedpreferences'
+include ':kotlin-database'
+include ':kotlin-system-services'
+include ':kotlin-notification'
