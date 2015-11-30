@@ -42,6 +42,36 @@ db.inTransation {
 }
 ```
 
+Before:
+
+```java
+String firstName = cursor.getString(cursor.getColumnIndexOrThrow("first_name"));
+```
+
+After:
+
+```kotlin
+val firstName = cursor.getString("first_name");
+```
+
+Before:
+
+```java
+String firstName = null;
+int firstNameColumnIndex = cursor.getColumnIndexOrThrow("first_name");
+if (!cursor.isNull(firstNameColumnIndex)) {
+  firstName = cursor.getString(firstNameColumnIndex);
+}
+firstNameView.setText(firstName != null ? firstName : "Andrew");
+```
+
+After:
+
+```kotlin
+val firstName = cursor.getStringOrNull("first_name")
+firstNameView.setText(firstName ?: "Andrew")
+```
+
 ## SharedPreferences
 
 Before:
