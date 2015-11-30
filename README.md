@@ -83,7 +83,7 @@ user.apply()
 Before:
 
 ```java
-SharedPreferences.Editor editor = preferences.edit();
+SharedPreferences.Editor editor = prefs.edit();
 
 editor.putString("first_name", "Andrew");
 editor.putString("last_name", "Chen");
@@ -95,7 +95,7 @@ editor.apply();
 or
 
 ```java
-SharedPreferencesUtils.from(preferences).apply(editor -> {
+SharedPreferencesUtils.from(prefs).apply(editor -> {
   editor.putString("first_name", "Andrew");
   editor.putString("last_name", "Chen");
   editor.remove("age");
@@ -103,6 +103,14 @@ SharedPreferencesUtils.from(preferences).apply(editor -> {
 ```
 
 After:
+
+```kotlin
+prefs.edit {
+  putString("first_name", "Andrew")
+  putString("last_name", "Chen")
+  remove("age")
+}
+```
 
 ## System Services
 
