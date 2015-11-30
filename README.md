@@ -153,10 +153,10 @@ jcenter:
 
 ```gradle
 dependencies {
-    compile 'com.infstory:kotlin-sharedpreferences:1.0.0'
-    compile 'com.infstory:kotlin-database:1.0.0'
-    compile 'com.infstory:kotlin-system-services:1.0.0'
-    compile 'com.infstory:kotlin-notification:1.0.0'
+    compile 'com.infstory:kotlinx-sharedpreferences:1.0.0'
+    compile 'com.infstory:kotlinx-database:1.0.0'
+    compile 'com.infstory:kotlinx-system-services:1.0.0'
+    compile 'com.infstory:kotlinx-notification:1.0.0'
 }
 ```
 
@@ -168,10 +168,10 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 dependencies {
-    compile 'com.github.yongjhih.kotlin-android-extensions:kotlin-sharedpreferences:-SNAPSHOT'
-    compile 'com.github.yongjhih.kotlin-android-extensions:kotlin-database:-SNAPSHOT'
-    compile 'com.github.yongjhih.kotlin-android-extensions:kotlin-system-services:-SNAPSHOT'
-    compile 'com.github.yongjhih.kotlin-android-extensions:kotlin-notification:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-android-extensions:kotlinx-sharedpreferences:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-android-extensions:kotlinx-database:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-android-extensions:kotlinx-system-services:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-android-extensions:kotlinx-notification:-SNAPSHOT'
 }
 ```
 

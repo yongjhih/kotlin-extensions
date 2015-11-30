@@ -1,7 +1,7 @@
 package com.graffity
 
 import android.content.Context
-import kotlin.android.sharedpreferences.Preferences
+import kotlinx.android.sharedpreferences.Preferences
 
 /**
  * Created by andrew on 11/28/15.
