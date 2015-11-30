@@ -147,6 +147,8 @@ val notification = Notification.build(context) {
 }
 ```
 
+## Query
+
 ## Installation
 
 jcenter:
