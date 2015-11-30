@@ -66,6 +66,18 @@ public open class Preferences(prefs: SharedPreferences): SharedPreferences by pr
                     null
                 }
             } as T
+            return when (property.returnType) {
+                kotlin.Boolean::class.java    -> thisRef.getBoolean(property.name, false)
+                kotlin.Float::class.java      -> thisRef.getFloat(property.name, 0f)
+                kotlin.Int::class.java        -> thisRef.getInt(property.name, 0)
+                kotlin.Long::class.java       -> thisRef.getLong(property.name, 0L)
+                kotlin.String::class.java     -> thisRef.getString(property.name, null)
+                java.lang.Boolean::class.java -> thisRef.getBoolean(property.name, false)
+                java.lang.Float::class.java   -> thisRef.getFloat(property.name, 0f)
+                java.lang.Integer::class.java -> thisRef.getInt(property.name, 0)
+                java.lang.Long::class.java    -> thisRef.getLong(property.name, 0L)
+                java.lang.String::class.java  -> thisRef.getString(property.name, null)
+            } as T
             */
         }
 
