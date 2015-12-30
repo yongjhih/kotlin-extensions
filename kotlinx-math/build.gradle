@@ -1,31 +1,15 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-
-android {
-    compileSdkVersion 23
-    buildToolsVersion '23.0.2'
-    defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+buildscript {
+    repositories {
+        jcenter()
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-    productFlavors {
-    }
-
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
+apply plugin: 'kotlin'
+
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     // testCompile mockito
@@ -34,5 +18,4 @@ dependencies {
     // testCompile junit
 }
 
-apply plugin: 'com.github.dcendents.android-maven'
-apply from: 'android-javadoc.gradle'
+apply plugin: 'maven'
