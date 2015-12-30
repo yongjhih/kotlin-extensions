@@ -32,7 +32,7 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':kotlinx-sharedpreferences')
+    compile project(':kotlinx-android-sharedpreferences')
     //compile 'com.github.yongjhih.kotlin-android-extensions:kotlinx-sharedpreferences:-SNAPSHOT'
     compile 'com.facebook.android:facebook-android-sdk:4.7.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

@@ -1,4 +1,4 @@
-# kotlin-android-extensions
+# kotlin-extensions
 
 <!--[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxParse-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1670)-->
 <!--[![Download](https://api.bintray.com/packages/yongjhih/maven/kotlin-android-extensions/images/download.svg) ](https://bintray.com/yongjhih/maven/kotlin-android-extensions/_latestVersion)-->
@@ -187,16 +187,21 @@ val notification = Notification.build(context) {
 
 ## Query
 
+## Math
+
+
+
 ## Installation
 
 jcenter:
 
 ```gradle
 dependencies {
-    compile 'com.infstory:kotlinx-sharedpreferences:1.0.0'
-    compile 'com.infstory:kotlinx-database:1.0.0'
-    compile 'com.infstory:kotlinx-system-services:1.0.0'
-    compile 'com.infstory:kotlinx-notification:1.0.0'
+    compile 'com.infstory:kotlinx-android-sharedpreferences:1.0.0'
+    compile 'com.infstory:kotlinx-android-database:1.0.0'
+    compile 'com.infstory:kotlinx-android-system-services:1.0.0'
+    compile 'com.infstory:kotlinx-android-notification:1.0.0'
+    compile 'com.infstory:kotlinx-math:1.0.0'
 }
 ```
 
@@ -208,10 +213,11 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 dependencies {
-    compile 'com.github.yongjhih.kotlin-android-extensions:kotlinx-sharedpreferences:-SNAPSHOT'
-    compile 'com.github.yongjhih.kotlin-android-extensions:kotlinx-database:-SNAPSHOT'
-    compile 'com.github.yongjhih.kotlin-android-extensions:kotlinx-system-services:-SNAPSHOT'
-    compile 'com.github.yongjhih.kotlin-android-extensions:kotlinx-notification:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-extensions:kotlinx-android-sharedpreferences:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-extensions:kotlinx-android-database:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-extensions:kotlinx-android-system-services:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-extensions:kotlinx-android-notification:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-extensions:kotlinx-math:-SNAPSHOT'
 }
 ```
 
