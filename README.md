@@ -189,7 +189,7 @@ val notification = Notification.build(context) {
 
 ## Math
 
-
+Import from [MichaelRocks/MathExtensions.kt](https://gist.github.com/MichaelRocks/f8f66230707bcd88a239)
 
 ## Installation
 
