@@ -16,5 +16,8 @@ before_install:
     - export JAVA8_HOME=/usr/lib/jvm/java-8-oracle
     - export JAVA_HOME=$JAVA8_HOME
     - echo yes | android update sdk --all --filter build-tools-23.0.2 --no-ui --force > /dev/null
+    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=extra-android-m2repository
+    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=extra-google-m2repository
+
 script:
     - ./gradlew clean assemble check
