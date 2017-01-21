@@ -5,9 +5,7 @@ allprojects {
     }
 
     ext {
-        //kotlin_version = '0.14.451'
-        //kotlin_version = "1.0.0-beta-1103"
-        kotlin_version = "1.0.0-beta-2423"
-        support_version = '23.0.1'
+        kotlin_version = "1.0.6"
+        support_version = '23.4.0'
     }
 }
