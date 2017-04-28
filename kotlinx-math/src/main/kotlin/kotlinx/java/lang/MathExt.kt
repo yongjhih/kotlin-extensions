@@ -1,18 +1,18 @@
 /*
-* Copyright 2015 Michael Rozumyanskiy
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-*     http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
+ * Copyright 2015 Michael Rozumyanskiy
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 fun Double.sin(): Double = Math.sin(this)
 fun Double.cos(): Double = Math.cos(this)
@@ -86,33 +86,33 @@ fun Float.scalb(scaleFactor: Int): Float = Math.scalb(this, scaleFactor)
 fun Float.clamp(min: Float, max: Float): Float = Math.max(min, Math.min(this, max))
 
 object FloatMath {
-    val PI: Float = Math.PI.toFloat()
-    val E: Float = Math.E.toFloat()
+  val PI: Float = Math.PI.toFloat()
+  val E: Float = Math.E.toFloat()
 
-    fun sin(value: Float): Float = Math.sin(value.toDouble()).toFloat()
-    fun cos(value: Float): Float = Math.cos(value.toDouble()).toFloat()
-    fun tan(value: Float): Float = Math.tan(value.toDouble()).toFloat()
-    fun sqrt(value: Float): Float = Math.sqrt(value.toDouble()).toFloat()
-    fun acos(value: Float): Float = Math.acos(value.toDouble()).toFloat()
-    fun asin(value: Float): Float = Math.asin(value.toDouble()).toFloat()
-    fun atan(value: Float): Float = Math.atan(value.toDouble()).toFloat()
-    fun atan2(x: Float, y: Float): Float = Math.atan2(x.toDouble(), y.toDouble()).toFloat()
-    fun pow(x: Float, y: Float): Float = Math.pow(x.toDouble(), y.toDouble()).toFloat()
-    fun ceil(x: Float): Float = Math.ceil(x.toDouble()).toFloat()
-    fun floor(x: Float): Float = Math.floor(x.toDouble()).toFloat()
-    fun toRadians(angdeg: Float): Float = Math.toRadians(angdeg.toDouble()).toFloat()
-    fun toDegrees(angrad: Float): Float = Math.toDegrees(angrad.toDouble()).toFloat()
-    fun exp(x: Float): Float = Math.exp(x.toDouble()).toFloat()
-    fun log(x: Float): Float = Math.log(x.toDouble()).toFloat()
-    fun log10(x: Float): Float = Math.log10(x.toDouble()).toFloat()
-    fun cbrt(x: Float): Float = Math.cbrt(x.toDouble()).toFloat()
-    fun IEEEremainder(x: Float, y: Float): Float = Math.IEEEremainder(x.toDouble(), y.toDouble()).toFloat()
-    fun rint(x: Float): Float = Math.rint(x.toDouble()).toFloat()
-    fun sinh(x: Float): Float = Math.sinh(x.toDouble()).toFloat()
-    fun cosh(x: Float): Float = Math.cosh(x.toDouble()).toFloat()
-    fun tanh(x: Float): Float = Math.tanh(x.toDouble()).toFloat()
-    fun expm1(x: Float): Float = Math.expm1(x.toDouble()).toFloat()
-    fun log1p(x: Float): Float = Math.log1p(x.toDouble()).toFloat()
-    fun nextAfter(start: Float, direction: Float): Float = Math.nextAfter(start, direction.toDouble())
-    fun clamp(value: Float, min: Float, max: Float): Float = Math.max(min, Math.min(value, max))
+  fun sin(value: Float): Float = Math.sin(value.toDouble()).toFloat()
+  fun cos(value: Float): Float = Math.cos(value.toDouble()).toFloat()
+  fun tan(value: Float): Float = Math.tan(value.toDouble()).toFloat()
+  fun sqrt(value: Float): Float = Math.sqrt(value.toDouble()).toFloat()
+  fun acos(value: Float): Float = Math.acos(value.toDouble()).toFloat()
+  fun asin(value: Float): Float = Math.asin(value.toDouble()).toFloat()
+  fun atan(value: Float): Float = Math.atan(value.toDouble()).toFloat()
+  fun atan2(x: Float, y: Float): Float = Math.atan2(x.toDouble(), y.toDouble()).toFloat()
+  fun pow(x: Float, y: Float): Float = Math.pow(x.toDouble(), y.toDouble()).toFloat()
+  fun ceil(x: Float): Float = Math.ceil(x.toDouble()).toFloat()
+  fun floor(x: Float): Float = Math.floor(x.toDouble()).toFloat()
+  fun toRadians(angdeg: Float): Float = Math.toRadians(angdeg.toDouble()).toFloat()
+  fun toDegrees(angrad: Float): Float = Math.toDegrees(angrad.toDouble()).toFloat()
+  fun exp(x: Float): Float = Math.exp(x.toDouble()).toFloat()
+  fun log(x: Float): Float = Math.log(x.toDouble()).toFloat()
+  fun log10(x: Float): Float = Math.log10(x.toDouble()).toFloat()
+  fun cbrt(x: Float): Float = Math.cbrt(x.toDouble()).toFloat()
+  fun IEEEremainder(x: Float, y: Float): Float = Math.IEEEremainder(x.toDouble(), y.toDouble()).toFloat()
+  fun rint(x: Float): Float = Math.rint(x.toDouble()).toFloat()
+  fun sinh(x: Float): Float = Math.sinh(x.toDouble()).toFloat()
+  fun cosh(x: Float): Float = Math.cosh(x.toDouble()).toFloat()
+  fun tanh(x: Float): Float = Math.tanh(x.toDouble()).toFloat()
+  fun expm1(x: Float): Float = Math.expm1(x.toDouble()).toFloat()
+  fun log1p(x: Float): Float = Math.log1p(x.toDouble()).toFloat()
+  fun nextAfter(start: Float, direction: Float): Float = Math.nextAfter(start, direction.toDouble())
+  fun clamp(value: Float, min: Float, max: Float): Float = Math.max(min, Math.min(value, max))
 }
