@@ -5,7 +5,11 @@ allprojects {
     }
 
     ext {
-        kotlin_version = "1.0.6"
-        support_version = '23.4.0'
+        kotlin_version = "1.1.1"
+        support_version = '25.0.1'
+        compileSdkVersion = 25
+        buildToolsVersion = '25.0.2'
+        targetSdkVersion = compileSdkVersion
+        androidGradleBuildToolsVersion = "2.3.1"
     }
 }
