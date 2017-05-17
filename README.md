@@ -191,6 +191,20 @@ val notification = Notification.build(context) {
 
 Import from [MichaelRocks/MathExtensions.kt](https://gist.github.com/MichaelRocks/f8f66230707bcd88a239)
 
+## ThreeTen Backport (JSR-310)
+
+```kt
+LocalDateTime.now().toDate()
+```
+
+```kt
+new Date().toLocalDateTime()
+```
+
+## Misc
+
+* https://gist.github.com/yongjhih/35e7474351e73d26ad26432901101902
+
 ## Installation
 
 jcenter:
@@ -212,12 +226,14 @@ repositories {
     // ...
     maven { url "https://jitpack.io" }
 }
+
 dependencies {
     compile 'com.github.yongjhih.kotlin-extensions:kotlinx-android-sharedpreferences:-SNAPSHOT'
     compile 'com.github.yongjhih.kotlin-extensions:kotlinx-android-database:-SNAPSHOT'
     compile 'com.github.yongjhih.kotlin-extensions:kotlinx-android-system-services:-SNAPSHOT'
     compile 'com.github.yongjhih.kotlin-extensions:kotlinx-android-notification:-SNAPSHOT'
     compile 'com.github.yongjhih.kotlin-extensions:kotlinx-math:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-extensions:kotlinx-threetenbp:-SNAPSHOT'
 }
 ```
 
