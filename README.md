@@ -201,6 +201,42 @@ LocalDateTime.now().toDate()
 new Date().toLocalDateTime()
 ```
 
+## View
+
+```kt
+view.fadeOut()
+```
+
+```kt
+view.fadeIn()
+```
+
+```kt
+for (view in views.children())
+```
+
+```kt
+if (view in views) {
+  // ..
+}
+```
+
+```kt
+views += view
+```
+
+```kt
+views -= view
+```
+
+```kt
+views.forEach {}
+```
+
+```kt
+views.filter {}
+```
+
 ## Misc
 
 * https://gist.github.com/yongjhih/35e7474351e73d26ad26432901101902
@@ -216,6 +252,7 @@ dependencies {
     compile 'com.infstory:kotlinx-android-system-services:1.0.0'
     compile 'com.infstory:kotlinx-android-notification:1.0.0'
     compile 'com.infstory:kotlinx-math:1.0.0'
+    compile 'com.infstory:kotlinx-android-view:1.0.0'
 }
 ```
 
@@ -234,6 +271,7 @@ dependencies {
     compile 'com.github.yongjhih.kotlin-extensions:kotlinx-android-notification:-SNAPSHOT'
     compile 'com.github.yongjhih.kotlin-extensions:kotlinx-math:-SNAPSHOT'
     compile 'com.github.yongjhih.kotlin-extensions:kotlinx-threetenbp:-SNAPSHOT'
+    compile 'com.github.yongjhih.kotlin-extensions:kotlinx-android-view:-SNAPSHOT'
 }
 ```
 
