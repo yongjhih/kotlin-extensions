@@ -243,19 +243,6 @@ views.filter {}
 
 ## Installation
 
-jcenter:
-
-```gradle
-dependencies {
-    compile 'com.infstory:kotlinx-android-sharedpreferences:1.0.0'
-    compile 'com.infstory:kotlinx-android-database:1.0.0'
-    compile 'com.infstory:kotlinx-android-system-services:1.0.0'
-    compile 'com.infstory:kotlinx-android-notification:1.0.0'
-    compile 'com.infstory:kotlinx-math:1.0.0'
-    compile 'com.infstory:kotlinx-android-view:1.0.0'
-}
-```
-
 jitpack:
 
 ```gradle
@@ -272,6 +259,19 @@ dependencies {
     compile 'com.github.yongjhih.kotlin-extensions:kotlinx-math:-SNAPSHOT'
     compile 'com.github.yongjhih.kotlin-extensions:kotlinx-threetenbp:-SNAPSHOT'
     compile 'com.github.yongjhih.kotlin-extensions:kotlinx-android-view:-SNAPSHOT'
+}
+```
+
+jcenter (not ready yet):
+
+```gradle
+dependencies {
+    compile 'com.infstory:kotlinx-android-sharedpreferences:1.0.0'
+    compile 'com.infstory:kotlinx-android-database:1.0.0'
+    compile 'com.infstory:kotlinx-android-system-services:1.0.0'
+    compile 'com.infstory:kotlinx-android-notification:1.0.0'
+    compile 'com.infstory:kotlinx-math:1.0.0'
+    compile 'com.infstory:kotlinx-android-view:1.0.0'
 }
 ```
 
