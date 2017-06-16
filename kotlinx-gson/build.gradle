@@ -1,0 +1,22 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "com.google.code.gson:gson:2.8.1"
+
+    // testCompile mockito
+    // testCompile assertj-android
+    // testCompile expresso
+    // testCompile junit
+}
+
+apply plugin: 'maven'
