@@ -156,15 +156,6 @@ After:
 val notificationManager = context.getNotificationManager()
 ```
 
-
-```kotlin
-preferences.edit {
-  putString("first_name", "Andrew")
-  putString("last_name", "Chen")
-  remove("age")
-}
-```
-
 ## Notification
 
 Before:
