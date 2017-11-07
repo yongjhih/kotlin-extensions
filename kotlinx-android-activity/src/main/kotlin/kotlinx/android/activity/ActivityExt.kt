@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentActivity
 import android.support.v4.app.FragmentTransaction
 import android.support.v4.content.ContextCompat
 import android.widget.Toast
+import android.content.Context
 
 fun Activity.toast(@StringRes resourceId: Int, length: Int = Toast.LENGTH_SHORT) {
     toast(getString(resourceId), length)
@@ -16,7 +17,7 @@ fun Activity.toast(message: String, length: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(this, message, length).show()
 }
 
-fun Activity.colorFromResource(@ColorRes colorResource: Int): Int {
+fun Context.color(@ColorRes colorResource: Int): Int {
     return ContextCompat.getColor(this, colorResource)
 }
 
