@@ -1,11 +1,11 @@
 # kotlin-extensions
 
 <!--[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RxParse-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1670)-->
-<!--[![Download](https://api.bintray.com/packages/yongjhih/maven/kotlin-android-extensions/images/download.svg) ](https://bintray.com/yongjhih/maven/kotlin-android-extensions/_latestVersion)-->
-[![JitPack](https://img.shields.io/github/tag/yongjhih/kotlin-android-extensions.svg?label=JitPack)](https://jitpack.io/#yongjhih/kotlin-android-extensions)
-[![javadoc](https://img.shields.io/github/tag/yongjhih/kotlin-android-extensions.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/kotlin-android-extensions/-SNAPSHOT/javadoc/)
-[![Build Status](https://travis-ci.org/yongjhih/kotlin-android-extensions.svg)](https://travis-ci.org/yongjhih/kotlin-android-extensions)
-[![Join the chat at https://gitter.im/yongjhih/kotlin-android-extensions](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yongjhih/kotlin-android-extensions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+<!--[![Download](https://api.bintray.com/packages/yongjhih/maven/kotlin-extensions/images/download.svg) ](https://bintray.com/yongjhih/maven/kotlin-extensions/_latestVersion)-->
+[![JitPack](https://img.shields.io/github/tag/yongjhih/kotlin-extensions.svg?label=JitPack)](https://jitpack.io/#yongjhih/kotlin-extensions)
+[![javadoc](https://img.shields.io/github/tag/yongjhih/kotlin-extensions.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/kotlin-extensions/-SNAPSHOT/javadoc/)
+[![Build Status](https://travis-ci.org/yongjhih/kotlin-extensions.svg)](https://travis-ci.org/yongjhih/kotlin-extensions)
+[![Join the chat at https://gitter.im/yongjhih/kotlin-android-extensions](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yongjhih/kotlin-extensions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Kotlin](https://img.shields.io/maven-central/v/org.jetbrains.kotlin/kotlin-maven-plugin.svg?label=Kotlin)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.jetbrains.kotlin%22)
 
 ![](art/kotlin-database.png)
