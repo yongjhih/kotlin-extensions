@@ -4,8 +4,8 @@ jdk:
     - oraclejdk8
 android:
   components:
-    - build-tools-23.0.2
-    - android-23
+    - build-tools-26.0.2
+    - android-26
     - extra-android-support
     - extra-android-m2repository
   licenses:
@@ -15,7 +15,7 @@ before_install:
     - export JAVA7_HOME=/usr/lib/jvm/java-7-oracle
     - export JAVA8_HOME=/usr/lib/jvm/java-8-oracle
     - export JAVA_HOME=$JAVA8_HOME
-    - echo yes | android update sdk --all --filter build-tools-23.0.2 --no-ui --force > /dev/null
+    - echo yes | android update sdk --all --filter build-tools-26.0.2 --no-ui --force > /dev/null
     - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=extra-android-m2repository
     - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=extra-google-m2repository
 
