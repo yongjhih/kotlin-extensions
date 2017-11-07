@@ -1,23 +1,6 @@
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath "com.android.tools.build:gradle:$androidGradleBuildToolsVersion"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
-    }
-}
-
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
-repositories {
-    jcenter()
-    //maven { url "https://jitpack.io" }
-}
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -52,9 +35,9 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
     compile "com.android.support:appcompat-v7:$support_version"
-    compile 'org.jetbrains.anko:anko-sdk15:0.7'
-    compile 'org.jetbrains.anko:anko-support-v4:0.7'
-    compile 'org.jetbrains.anko:anko-appcompat-v7:0.7'
+    compile "org.jetbrains.anko:anko-sdk15:$anko_version"
+    compile "org.jetbrains.anko:anko-support-v4:$anko_version"
+    compile "org.jetbrains.anko:anko-appcompat-v7:$anko_version"
     //compile 'org.jetbrains.anko:anko-sdk15:0.8'
     //compile 'org.jetbrains.anko:anko-support-v4:0.8'
     //compile 'org.jetbrains.anko:anko-appcompat-v7:0.8'
