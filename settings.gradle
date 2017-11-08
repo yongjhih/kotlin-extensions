@@ -1,5 +1,6 @@
 include ':app'
-include ':kotlinx-android-activity'
+include ':kotlinx-android-app'
+include ':kotlinx-android-support-v4'
 include ':kotlinx-android-sharedpreferences'
 include ':kotlinx-android-database'
 include ':kotlinx-android-system-services'
